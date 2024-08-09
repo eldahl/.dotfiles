@@ -1,0 +1,22 @@
+# Ignore all directories
+*/
+
+# Ignore these files
+.Xauthority
+.bash_history
+.bash_logout
+
+# Include configs
+.config/*
+!.config/
+
+!.config/i3
+!.config/screenlayout
+!.config/picom
+
+!.config/kitty
+!.config/nvim
+
+!.config/alsa
+
+
