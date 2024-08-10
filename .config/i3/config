@@ -39,6 +39,9 @@ exec_always $HOME/.config/screenlayout/config.sh
 exec_always --no-startup-id sleep 3 && picom -b
 exec sleep 1 && feh --bg-fill ~/.config/console.jpg
 
+# Spectacle shortcut
+bindsym $mod+Shift+Print exec spectacle -r -g
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
