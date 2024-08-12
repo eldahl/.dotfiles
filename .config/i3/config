@@ -37,7 +37,7 @@ exec --no-startup-id nm-applet
 exec_always "setxkbmap -layout dk"
 exec_always $HOME/.config/screenlayout/config.sh
 exec_always --no-startup-id sleep 3 && picom -b
-exec sleep 1 && feh --bg-fill ~/.config/console.jpg
+exec_always sleep 1 && feh --bg-fill ~/.config/console.png
 
 # Spectacle shortcut
 bindsym $mod+Shift+Print exec spectacle -r -g

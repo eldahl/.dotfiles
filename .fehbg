@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-fill '/home/eldahl/.config/console.jpg' 
+feh --no-fehbg --bg-fill '/home/eldahl/.config/console.png' 
