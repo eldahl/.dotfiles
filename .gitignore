@@ -5,6 +5,7 @@
 .Xauthority
 .bash_history
 .bash_logout
+.python_history
 
 # Include configs
 .config/*
