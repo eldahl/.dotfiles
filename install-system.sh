@@ -1,15 +1,23 @@
 #!/bin/sh
 
+if [ "$ENABLE_MULTILIB" -eq 1 ]; then
+  echo 'Setting up packages and applying patches'
+else
+  echo 'Turn on Multilib packages in pacman by uncommenting \"[multilib]/" and the mirrorlist below it in /etc/pacman.conf'
+  echo 'To continue, set ENABLE_MULTILIB to 1 and run again.'
+  exit 1
+fi
+
 # Install script for applications and tools assuming base Arch Linux
 # system with packages: base linux linux-firmware neovim amd-ucode efibootmgr grub
 sudo pacman --needed -S alsa-firmware alsa-utils arandr bitwarden clang cmake ninja discord dmenu dolphin fastfetch feh firefox font-manager git github-cli gnome-keyring htop i3-wm i3status kitty less noto-fonts-emoji nvidia nerd-fonts pasystray picom pipewire pipewire-alsa pipewire-pulse polkit-kde-agent sof-firmware starship sudo thunderbird ufw which xorg xorg-xinit
-sudo pacman --needed -S rawtherapee gimp obsidian gvfs gphoto2 xdg-desktop-portal syncthing spectacle raw-thumbnailer kdesdk-thumbnailers kdegraphics-thumbnailers i3lock gwenview xclip freecad unzip
+sudo pacman --needed -S rawtherapee gimp obsidian gvfs gphoto2 xdg-desktop-portal syncthing spectacle raw-thumbnailer kdesdk-thumbnailers kdegraphics-thumbnailers i3lock gwenview xclip freecad unzip zip wine winetricks lib32-nvidia-utils chromium
 
 # Install yay for AUR packages
 pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 
 # Install AUR packages
-yay -S curseforge minecraft-launcher spotify-launcher nomachine zsa-keymapp-bin zoom qt6-imageformats eddie-ui-git
+yay -S curseforge minecraft-launcher spotify-launcher nomachine zsa-keymapp-bin zoom qt6-imageformats eddie-ui-git bottles
 
 ### Dolphin default programs for file extension support ###
 # Taken from Arch Linux support forum: https://bbs.archlinux.org/viewtopic.php?id=293509
