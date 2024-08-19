@@ -1,9 +1,11 @@
+[user]
+	email = 71466904+eldahl@users.noreply.github.com
+	name = eldahl
+[core]
+	editor = nvim
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
-[user]
-	email = 71466904+eldahl@users.noreply.github.com
-	name = eldahl
