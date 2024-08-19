@@ -12,6 +12,7 @@
 !.config/
 
 !.config/i3
+!.config/polybar
 !.config/screenlayout
 !.config/picom
 
