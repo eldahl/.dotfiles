@@ -25,4 +25,5 @@
 
 !.config/alsa
 
-
+# Include files in config dir
+!.config/iommu_groups.sh
