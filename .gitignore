@@ -6,6 +6,10 @@
 .bash_history
 .bash_logout
 .python_history
+.nvidia-settings-rc
+.pulse-cookie
+.steampath
+.steampid
 
 # Include configs
 .config/*
