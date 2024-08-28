@@ -40,7 +40,7 @@ exec_always --no-startup-id sleep 3 && picom -b
 exec_always sleep 1 && feh --bg-fill ~/.config/console.png
 
 exec_always export XDG_MENU_PREFIX=plasma- && kbuildsycoca6
-
+exec_always --no-startup-id redshift -l 54.91449187166981:9.783988769228468
 # Status bar
 #exec_always --no-startup-id killall polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
