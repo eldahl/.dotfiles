@@ -11,6 +11,8 @@
 .pulse-cookie
 .steampath
 .steampid
+.gtkrc-2.0
+explicit_filter.restore
 
 # Include configs
 .config/*

@@ -15,6 +15,8 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:monospace 8
 
+default_border none
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -34,15 +36,21 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# Keyboard layout
 exec_always "setxkbmap -layout dk"
+# Screen layout
 exec_always $HOME/.config/screenlayout/config.sh
+# Compositor - picom
 exec_always --no-startup-id sleep 3 && picom -b
+# Background
 exec_always sleep 1 && feh --bg-fill ~/.config/console.png
-
+# Default app, and app selection in dolphin fix
 exec_always export XDG_MENU_PREFIX=plasma- && kbuildsycoca6
-exec_always --no-startup-id redshift -l 54.91449187166981:9.783988769228468
+# Redshift - night mode
+exec_always --no-startup-id killall redshift
+exec_always --no-startup-id sleep 5 && redshift -l 54.91449187166981:9.783988769228468
 # Status bar
-#exec_always --no-startup-id killall polybar
+exec_always --no-startup-id killall polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Spectacle shortcut
